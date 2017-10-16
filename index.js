@@ -8,7 +8,7 @@ const bot = new TelegramBot(token, {polling: true});
 bot.onText(/\/start/, (msg) => {
 	const chatId = msg.chat.id;
 
-	const resp = "Welcome to YDLS Bot";
+	const resp = "Welcome to YDLS Bot!";
 	bot.sendMessage(chatId, resp);
 });
 
