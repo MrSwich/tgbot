@@ -4,6 +4,15 @@ const token = '341606823:AAHOMPub5YoX86JKuGUYxA56abhYvdlQsyo';
 
 const bot = new TelegramBot(token, {polling: true});
 
+// Start
+bot.onText(/\/start/, (msg) => {
+	const chatId = msg.chat.id;
+
+	const resp = "Welcome to YDLS Bot";
+	bot.sendMessage(chatId, resp);
+});
+
+
 // Echo
 bot.onText(/\/echo (.+)/, (msg, match) => {
 	const chatId = msg.chat.id;
